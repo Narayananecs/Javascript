@@ -1,0 +1,19 @@
+function bookCab()
+{
+  console.log("Hi welcome to our portal .! Please be patience until we show the availability of cars")
+}
+function availabilityOfCab(success)
+{
+  setTimeout(()=>{
+    console.log("Innova available");
+    let status = confirm("Pls press y to confirm booking") 
+    if(status)
+    success();
+  },500)
+  
+}
+function successMsg(){
+  console.log("Booked successfully");
+}
+bookCab();
+availabilityOfCab(successMsg);
