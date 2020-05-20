@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let a = 0;
+        let b;
+        function nullish() {
+            console.log("Using nullish ", b = a ?? 5 ,"Eliminates only if value is null or defined");
+        }
+
+        nullish();
+
+        function usingOrOperator() {
+            console.log("Using Or ", b = a || 5,"Eliminates if value is 0");
+        }
+
+        usingOrOperator();
+        console.log("Changing value of variable a to null ");
+        setTimeout(() => {
+            console.log("");
+            a = null;
+            nullish();
+            usingOrOperator();
+        }, 3000);
+    </script>
+</body>
+
+</html>
